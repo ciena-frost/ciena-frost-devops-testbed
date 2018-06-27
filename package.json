@@ -1,6 +1,6 @@
 {
-  "name": "ciena-devops-testbed",
-  "version": "3.3.10",
+  "name": "ciena-frost-devops-testbed",
+  "version": "0.0.1",
   "description": "Used to test 'pr-bumper' and 'ciena-devops' integrations, and other DevOps-related activities",
   "directories": {
     "doc": "doc",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/ciena-blueplanet/ciena-devops-testbed.git"
+    "url": "http://github.com/ciena-frost/ciena-frost-devops-testbed.git"
   },
   "engines": {
     "node": ">= 6.0.0"
   },
-  "author": "Jeremy Brown <jeremy@notmessenger.com> (http://www.notmessenger.com)",
+  "author": "Michael Carroll (https://github.com/juwara0)",
   "contributors": [],
   "license": "MIT",
   "devDependencies": {},
