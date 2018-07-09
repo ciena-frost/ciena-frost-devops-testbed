@@ -24,23 +24,15 @@ env:
   - secure: l/YOowXGkXmBxw3ePnTiv6zu0UAwPljri258bJJAWa7mnC64gGKMVAC+IZJktpCfOse0SF+PdW5voYEOchdK1kClpD/6MhJKkMwQiidAt5jPM5OTikRbGypmakAPsxHuqwMehkIpFdehsMRDR8JhGpmSITdLCQWoGgczQ2afDLrqAN64hLQBH8mzc9TPpW423pAWjxsjRD8Ttl86QyG7q7ejOraWD8/kYvl74bQIPRQy2FX3zFpMMSLn35skpYdNwoAalZrKtTbYzDoBHPrd2kQu3uqDZ140k3dd/0MHwJptaxWht3LUbbHYK8YahkNrHhxiusyv7gFhsN3zerAEor5C4+7Ve6zzZydxezdZqQIOKUuzb/p2dvZ4qEsJwjJmRYaLiqlLWJPhF3C4g1fsKBFn1QksAD9c9YOjzibHhZTygaqQ9wqui8P7t3dzkxuuyPYOmyRz2m71lN2Tu46vo8jzQbrciMJE2P+N09le0xFKF7GUdt2bey3jTJya20AloA0fSlZ08l8osLZE+D8B0WUzKwXjWlIJG9J4AVN2J1MLyJ6VstCqmBvzjzzas4NDSrlVVdpqX5mCd/8pJHsYVbzoKragb1erakhx/PqD30RYjrUA1qQVttAvLntWUqAtqp+iZMcmdqMPzAik88PBXc8SVAmivISShajv8xcm1VA=
 
 before_install:
-- npm install -g greenkeeper-lockfile
-- npm install -g git://github.com/juwara0/pr-bumper#upstreamBranch
-- npm install -g ciena-devops@^1.0.0
+- npm install -g pr-bumper@^3.7.0 ciena-devops@^1.0.0
 - $(npm root -g)/pr-bumper/.travis/maybe-check-scope.sh
 
 install:
 - $(npm root -g)/pr-bumper/.travis/maybe-install.sh
 
-before_script:
-- greenkeeper-lockfile-update
-
 script:
 - $(npm root -g)/pr-bumper/.travis/maybe-test.sh
 - $(npm root -g)/pr-bumper/.travis/maybe-bump-version.sh
-
-after_script:
-- greenkeeper-lockfile-upload
 
 after_success:
 - $(npm root -g)/pr-bumper/.travis/maybe-publish-coverage.sh
